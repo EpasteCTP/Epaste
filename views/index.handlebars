@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>{{title}}</title>
+    
+    
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">{{title}}</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/post">Form</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+     <div class="jumbotron">
+    <p>This config is running {{title}} with support for Handlebars as a View Engine.</p>
+    <p>Additionally this page has Bootstrap Support.</p>
+    </div>
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-action active">Todo:</li>
+  <li class="list-group-item list-group-item-success">Make a Test Query Using Existing Table (Product)</li>
+  <li class="list-group-item">Implement Homepage (David)</li>
+  <li class="list-group-item">Implement Catalog View (Angel)</li>
+  <li class="list-group-item list-group-item-warning">Implement Form to Submit Products to Database(Thomas) *Input Validation/Image Path Generation Needed*</li>
+  <li class="list-group-item">Template using Handlebars for repeated content (Navbar)</li>
+  <li class="list-group-item">Implement HTTP Error Page</li>
+</ul>
+<div class="mt-2 col-md-12">
+<h4>Sample Database GET (All Item Names from "Products" Table):</h4>
+<p>{{#name}}
+{{name}}
+{{/name}}</p>
+</div>
+
+  </body>
+</html>
+
+

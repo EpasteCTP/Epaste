@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>{{title}}</title>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <span class="navbar-brand mb-0 h1">{{title}}</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/post">Form</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="mt-2 col-md-12">
+  <h4>Post Item to Database (Test)</h4>
+  <form action="/post" method="post">
+    <div class "form-group">
+        <label for="price">Name</label>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Enter Product Name">
+    </div>
+    <div class "form-group">
+        <label for="price">Price</label>
+        <input name="price" type="text" class="form-control" id="price" placeholder="Enter price">
+    </div>
+   <div class "form-group">
+        <label for="quantity">Quantity</label>
+        <input name="stock" type="number" class="form-control" id="stock" placeholder="Enter quantity">
+    </div>
+    <div class "form-group">
+        <label for="price">Description</label>
+        <textarea name="description" type="text" rows="3"class="form-control" id="description" placeholder="Enter Product Description"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+  </body>
+</html>
+
+
