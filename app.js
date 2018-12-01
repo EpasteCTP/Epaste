@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static('./public'));
 
 // Uncomment the following if you want to serve up static assets.
 // (You must create the public folder)
@@ -23,6 +23,7 @@ app.use(express.static('./public'));
 const exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
   layoutsDir: './views',
+  partialsDir: './views/templates'
   //defaultLayout: 'index',
 }));
 app.set('view engine', 'handlebars');
@@ -43,3 +44,14 @@ models.sequelize.sync({force: false})
       console.log(`Server is up and running on port: ${PORT}`)
     });
   });
+
+
+app.use(function (req, res, next) {
+    next(createError(404));
+});
+
+app.use(function (err,req, res, next) {
+  const message = err.message;
+  const error = err.status; 
+  res.render('error',{displayMessage: message, errorMessage: error});
+})

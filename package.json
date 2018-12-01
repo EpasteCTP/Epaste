@@ -1,19 +1,20 @@
 {
-  "name": "backend-starter-code",
+  "name": "Epaste",
   "version": "1.0.0",
-  "description": "Starter code for an Express/Sequelize backend.",
+  "description": "A full stack web application for CTP 2018",
   "main": "app.js",
   "scripts": {
     "start": "nodemon -L app.js",
     "test": "jest"
   },
-  "author": "Edgardo Molina",
+  "author": "Thomas Jimenez, David Chan, Angel Checo",
   "license": "ISC",
   "devDependencies": {
     "jest": "^21.2.1"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "event-stream": "^4.0.1",
     "express": "^4.16.1",
     "express-handlebars": "^3.0.0",
     "http-errors": "^1.7.1",

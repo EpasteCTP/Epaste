@@ -4,6 +4,6 @@ const router = express.Router();
 
 router.use('/post', require('./post'));
 router.use('/', require('./home'));
-//router.use('/post', require('./post'));
+
 
 module.exports = router;

@@ -1,0 +1,34 @@
+p{
+    color:red;
+}
+
+body { 
+    padding-top: 140px; 
+}
+
+nav .nav-item{
+    font-family:'Lato', sans-serif;
+    font-size:1.25em;
+}
+
+.navbar-brand{
+    margin-left: .5em;
+    font-family:'Montserrat', sans-serif;
+    font-size: 2.625em;
+    font-weight: medium;
+
+}
+
+form i{
+    position: absolute;
+    padding-top: 6px;
+    padding-left: 6px;
+}
+
+#searchbar{
+    text-indent: 30px;
+    height: 46px;
+}
+
+
+
