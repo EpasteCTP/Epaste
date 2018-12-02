@@ -9,7 +9,9 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('./public'));
+app.use(express.static('./public')); //File Directory for Storage (Images)
+app.use(express.static('./views/css')); //Page CSS
+app.use(express.static('./views/scripts')); //Page JS
 
 // Uncomment the following if you want to serve up static assets.
 // (You must create the public folder)
