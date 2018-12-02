@@ -7,4 +7,4 @@ How to Configure:
 3. Create a "public" folder, inside of that create a "product" folder, inside of the product folder create a "temp" folder. See Below for File Structure in "Epaste" folder root.
 
 
-![Public File Structure](https://imgur.com/9d6BGXx)
+![Public File Structure](https://i.imgur.com/9d6BGXx.png)
