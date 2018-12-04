@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('./public')); //File Directory for Storage (Images)
 app.use(express.static('./views/css')); //Page CSS
 app.use(express.static('./views/scripts')); //Page JS
+app.use(express.static('./views/assets')); //Page Image Assets
 
 // Uncomment the following if you want to serve up static assets.
 // (You must create the public folder)

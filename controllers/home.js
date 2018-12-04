@@ -3,43 +3,21 @@ const models = require('../models');
 
 const router = express.Router();
 
-
-//Sample Database GET (All Item Names from "Products" Table) Route
+//Get Route for Index Page
 router.get('/',(req, res) => {
-      models.Product.findAll()
-      .then((name) => {
-        res.render('index', { name, title:'Epaste' });
+  models.Product.findAll({attributes: ['name', 'image_path', 'featured_image']}).then((results) => {
+
+  res.render('index',{title:'Epaste', products:results});
 });
 });
 
-//Sample Routes for Reference
-/*//Test Get for Post
-router.get('/post',(req, res) => {
-      models.Product.findAll()
-      .then((price) => {
-        res.render('post', { price, title:'Epaste' }); //Looks for "Post" view
-});
-});
+//Get Route for Featured Products JSON
+router.get('/featured',(req, res) => {
+  models.Product.findAll({attributes: ['name', 'image_path','featured_image']}).then((products) => {
 
-router.post('/', (req, res) => {
-  res.json({
-    msg: "Successful POST to '/' route"
-  });
+  res.json({products});
 });
-
-router.put('/:id', (req, res) => {
-  res.json({
-    msg: "Successful PUT to '/' route",
-    id: req.params.id
-  });
 });
-
-router.delete('/:id', (req, res) => {
-  res.json({
-    msg: "Successful DELETE to '/' route",
-    id: req.params.id
-  });
-});*/
 
 
 module.exports = router;
